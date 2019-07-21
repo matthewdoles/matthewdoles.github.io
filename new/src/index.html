@@ -5,33 +5,9 @@
     <script src="script.js"></script>
     <title>Matthew Doles</title>
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-
-    <div id="buttons">
-        <button class="scrollButton" onclick="upFunction()" id="succulent" title="Go to succulent section">U</button>
-        <button class="scrollButton" onclick="downFunction()" id="rain" title="Go to rain section">D</button>
-    </div>
-
-    <script>
-        document.getElementById("succulent").style.display = "block";
-
-        // When the user clicks on the button, scroll to the top of the document
-        function succulentFunction() {
-            document.getElementById('top').scrollIntoView();
-        }
-
-        // When the user clicks on the button, scroll to the rain page of the document
-        function rainFunction() {
-            // document.body.scrollTop = 1000;
-            // document.documentElement.scrollTop = 1000;
-            document.getElementById('rainSection').scrollIntoView();
-        }
-    </script>
-
-
 
     <div class="simg1" id="top">
         <header>
@@ -41,8 +17,15 @@
         </header>
     </div>
 
-    <section class="section section-divider"></section>
-
+    <nav role="navigation" id="mainNav">
+        <ul>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#salesforce">Salesforce</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#socials">Socials</a></li>
+        </ul>
+    </nav> 
 
     <div class="simg2" id="experience">
         <header>
@@ -297,7 +280,7 @@
         </div>   
     </section>
 
-    <div class="rimg2">
+    <div class="rimg2" id="socials">
         <header>
             <div class="content">
                 <h1>Socials</h1>

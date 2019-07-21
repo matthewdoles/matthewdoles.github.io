@@ -60,7 +60,7 @@ audio {
 }
 
 .simg1 {
-  background-image: url('../img/temp.jpg');
+  background-color: crimson;
   min-height: 100%;
 }
 
@@ -234,4 +234,49 @@ header .content {
   margin: 0px auto;
   margin-bottom: 5px;
   margin-left: 5px;
+}
+
+
+.nav-scrolled {
+  position: fixed;
+}
+
+nav,
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  background: #333;
+  height: 5rem;
+  transition: .3s box-shadow;
+  z-index: 50;
+}
+
+.nav-scrolled {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.scroll-shadow {
+  box-shadow: 0 0 10px #333;
+}
+
+nav ul {
+  width: 90%;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+  transition: .3s color;
+}
+
+a:hover {
+  color: #fff;
 }
