@@ -10,233 +10,6 @@ body {
   line-height: 1.8em;
 }
 
-.scrollButton {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 99; 
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgba(17, 17, 17, 0.664);
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-
-  transition-duration: 0.4s;
-
-}
-
-#rain {
-  top: 80px;
-}
-
-
-.scrollButton:hover {
-  opacity: .5;
-}
-
-audio { 
-  display:none;
-}
-
-.simg1,
-.simg2,
-.simg3,
-.simg4,
-.rimg1,
-.rimg2,
-.rimg3,
-.rimg4 {
-  position: relative;
-  opacity: 0.8;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.simg1 {
-  background-color: crimson;
-  min-height: 100%;
-}
-
-.simg2 {
-  background-image: url('../img/experience.jpg');
-  min-height: 500px;
-  height: 50%;
-}
-
-.simg3 {
-  background-image: url('../img/Salesforce_logo.png');
-  min-height: 500px;
-  height: 50%;
-}
-
-.simg4 {
-  background-image: url('../img/background.jpg');
-  min-height: 500px;
-  height: 50%;
-  opacity: 1;
-}
-
-.rimg1 {
-  background-image: url('http://sar.usfsm.edu/wp-content/uploads/2015/07/DSC_01972FC5.jpg');
-  background-size: cover;
-  height: 50%;
-}
-
-.rimg2 {
-  background-image: url('../img/wood_background.jpg');
-  min-height: 500px;
-  height: 50%;
-}
-
-.rimg3 {
-  background-image: url('../img/wood_background.jpg');
-  min-height: 500px;
-  height: 50%;
-}
-
-.rimg4 {
-  background-image: url('https://images.pexels.com/photos/8633/nature-tree-green-pine.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  min-height: 500px;
-}
-
-.section {
-  height: auto;
-  padding: 30px 50px;
-  background: #FFFFFF
-}
-
-.section-succulent {
-  background: linear-gradient(to bottom, #ecd4ff 0%, rgb(255, 231, 232) 100%);
-  background-repeat: no-repeat;
-  color: rgb(102, 102, 119);
-}
-
-.section-divider {
-  background: #333;
-  opacity: .8;
-}
-
-.section-rain {
-  background-image: linear-gradient(to top, #ace0f9 0%, #fff1eb 100%);
-  background-repeat: no-repeat;
-  color: rgb(102, 102, 119);
-}
-
-.ptext {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 30px;
-  letter-spacing: 8px;
-  font-family: 'Handlee', cursive;
-}
-
-.ptext .border {
-  background-color: rgba(17, 17, 17, 0.664);
-  color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-@media(max-width:568px) {
-  .pimg1,
-  .pimg2,
-  .pimg3 {
-    background-attachment: scroll;
-  }
-}
-header {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background: rgba(229, 229, 229, 0.2);
-  z-index: 35;
-}
-header .content {
-  position: relative;
-  display: block;
-  color: #FFFFFF;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  text-shadow: 0px 0px 5px #000000;
-  display: inline-block;
-  text-align: center;
-  transform: translateX(-50%) translateY(-50%);
-  border: 5px solid #fff;
-  padding: .5em 3em;
-  background-color: rgba(0,0,0,.8);
-  z-index: 45;
-}
-.work-details {
-  padding: 30px;
-  height: auto;
-  overflow: auto;
-}
-.work-image {
-  width: 25%;
-  height: auto;
-  float:left
-}
-.work-image img {
-  max-width:40%;
-  max-height:40%;
-  float: right;
-}
-.work-info {
-  width: 55%;
-  height: auto;
-  float: left;
-  padding-left: 50px;
-}
-.work-info h1 {
-  margin-block-start: 0px;
-}
-#certifications {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-}
-#certifications-images {
-  width: 100%;
-  float:left
-}
-#certifications-images img {
-  max-width: 15%;
-  padding: 0px 20px;
-}
-
-.title h1:before {
-  content: "";
-  display:  inline-block;
-  border: 1px solid black;
-  width: 5%;
-  margin: 0px auto;
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-.title h1:after {
-  content: "";
-  display:  inline-block;
-  border: 1px solid black;
-  width: 5%;
-  margin: 0px auto;
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
-
-
 .nav-scrolled {
   position: fixed;
 }
@@ -271,12 +44,197 @@ nav ul {
   list-style-type: none;
 }
 
-a {
+nav ul a {
   text-decoration: none;
   color: #eee;
   transition: .3s color;
 }
 
-a:hover {
+nav ul a:hover {
   color: #fff;
+}
+
+#rain {
+  top: 80px;
+}
+
+
+.scrollButton:hover {
+  opacity: .5;
+}
+
+audio { 
+  display:none;
+}
+
+.home-img,
+.experience-img,
+.salesforce-img,
+.simg4,
+.rimg1,
+.rimg2,
+.rimg3,
+.rimg4 {
+  position: relative;
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.home-img {
+  background-color: crimson;
+  min-height: 100%;
+}
+
+.experience-img {
+  background-image: url('../img/experience.jpg');
+  min-height: 500px;
+  height: 50%;
+}
+
+.salesforce-img {
+  background-image: url('../img/Salesforce_logo.png');
+  min-height: 500px;
+  height: 50%;
+}
+
+.projects-image {
+  background-image: url('../img/background.jpg');
+  min-height: 500px;
+  height: 50%;
+  opacity: 1;
+}
+
+.education-image {
+  background-image: url('http://sar.usfsm.edu/wp-content/uploads/2015/07/DSC_01972FC5.jpg');
+  background-size: cover;
+  height: 50%;
+}
+
+.socials-image {
+  background-image: url('../img/wood_background.jpg');
+  min-height: 500px;
+  height: 50%;
+}
+
+.section {
+  height: auto;
+  padding: 30px 50px;
+  background: #FFFFFF
+}
+
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  letter-spacing: 8px;
+  font-family: 'Handlee', cursive;
+}
+
+.ptext .border {
+  background-color: rgba(17, 17, 17, 0.664);
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media(max-width:568px) {
+  .pimg1,
+  .pimg2,
+  .pimg3 {
+    background-attachment: scroll;
+  }
+}
+
+header {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background: rgba(229, 229, 229, 0.2);
+  z-index: 35;
+}
+header .content {
+  position: relative;
+  display: block;
+  color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 5px #000000;
+  display: inline-block;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  border: 5px solid #fff;
+  padding: .5em 3em;
+  background-color: rgba(0,0,0,.8);
+  z-index: 45;
+}
+
+.section-detail {
+  padding: 30px;
+  height: auto;
+  overflow: auto;
+}
+.section-image {
+  width: 25%;
+  height: auto;
+  float:left
+}
+.section-image img {
+  max-width:40%;
+  max-height:40%;
+  float: right;
+}
+.section-info {
+  width: 55%;
+  height: auto;
+  float: left;
+  padding-left: 50px;
+}
+.section-info h1 {
+  margin-block-start: 0px;
+}
+#certifications {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.certifications-images {
+  width: 100%;
+  float:left
+}
+.certifications-images img {
+  max-width: 15%;
+  padding: 0px 20px;
+}
+.title h1 {
+  padding: 20px; 
+  text-align:center;
+}
+
+.title h1:before {
+  content: "";
+  display:  inline-block;
+  border: 1px solid black;
+  width: 5%;
+  margin: 0px auto;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.title h1:after {
+  content: "";
+  display:  inline-block;
+  border: 1px solid black;
+  width: 5%;
+  margin: 0px auto;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
