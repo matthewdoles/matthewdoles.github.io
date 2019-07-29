@@ -70,11 +70,9 @@ audio {
 .home-img,
 .experience-img,
 .salesforce-img,
-.simg4,
-.rimg1,
-.rimg2,
-.rimg3,
-.rimg4 {
+.projects-image,
+.education-image,
+.socials-image {
   position: relative;
   opacity: 0.8;
   background-position: center;
