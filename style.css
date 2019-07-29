@@ -87,19 +87,19 @@ audio {
 }
 
 .experience-img {
-  background-image: url('../img/experience.jpg');
+  background-image: url('img/experience.jpg');
   min-height: 500px;
   height: 50%;
 }
 
 .salesforce-img {
-  background-image: url('../img/Salesforce_logo.png');
+  background-image: url('img/Salesforce_logo.png');
   min-height: 500px;
   height: 50%;
 }
 
 .projects-image {
-  background-image: url('../img/background.jpg');
+  background-image: url('img/background.jpg');
   min-height: 500px;
   height: 50%;
   opacity: 1;
@@ -112,7 +112,7 @@ audio {
 }
 
 .socials-image {
-  background-image: url('../img/wood_background.jpg');
+  background-image: url('img/wood_background.jpg');
   min-height: 500px;
   height: 50%;
 }
