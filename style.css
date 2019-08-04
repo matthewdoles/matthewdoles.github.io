@@ -14,8 +14,8 @@ body {
   position: fixed;
 }
 
-nav,
-ul {
+nav, 
+nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
