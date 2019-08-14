@@ -75,6 +75,7 @@
                             realized the overall landscape of our cluster's ORBs was in a poor state. Thus, I was put in charge of an effort 
                             to work with the various support teams to help improve the quality of each application's ORB and bring them to our baseline standards.
                         </li>
+                        <br/>
                         <li>
                             <b>Aggrify: </b>One of my favorite projects was enabling a service-level targeting tool offered by another RUN team cluster 
                             (Data &amp; Analytics) called Aggrify. This tool captures pertinent metadata about any jobs your application may have. 
@@ -82,6 +83,7 @@
                             enabled, we can monitor for job success and failures, analyze the mean time for a job to complete, and troubleshoot 
                             possible solutions to make the job run more efficiently.
                         </li>
+                        <br/>
                         <li>
                             <b>Knowledge Articles: </b>Whenever a Incident ticket is resolved in IRIS, you are required to find or create an appropriate
                             Knowledge Article that details the steps taken to resolve the issue in order to close the ticket. Over-time you build a strong
@@ -249,56 +251,60 @@
                 </p>
                 <p>
                     The second project I have worked on was a Visualforce to Lightning conversion/exercise. The Salesforce BUILD Team for
-                    J&ampJ have built an internal management tool (Salesforce instance) which helps them track demand, projects,
-                    resources, etc. Projects (Opportunity object) have related resources (Opportunity Resources custom object) which
-                    need to be filled by various emplyees (Contact object). When the applicatoin was built, a Visualforce page was
-                    developed to manage this interatoin of assigning contacts to a project role (Opportunity Resource) for a project
+                    J&amp;J have built an internal management tool (Salesforce instance) which helps them track demand, projects,
+                    resources, etc. Projects (Opportunity standard object) have related resources (Opportunity Resources custom object) which
+                    need to be filled by various employees (Contact standard object). When the application was built, a Visualforce page was
+                    developed to manage this interaction of assigning contacts to a project role (Opportunity Resource) for a project
                     (Opportunity). 
                 </p>
                 <p>
-                    This Visualforce page was called Opportunity Resource Management, and while the Visaulforce page got the job done -
+                    This Visualforce page was called Opportunity Resource Management, and while the Visualforce page got the job done -
                     it was in need of a makeover. Thus, my role was to modernize and convert this Visualforce page 
-                    into an Aura Component(s). The functionality largely remains the same, but the presentation and intuitveness 
+                    into an Aura Component(s). The functionality largely remains the same, but the presentation and intuitiveness 
                     was made a bit more user friendly. The new Opportunity Resource Management piece can be broken down into 4 
-                    seperate components that interact with one another:
+                    separate components that interact with one another:
                     <ul>
                         <li>
-                           <b>Search: </b>The top most component is the search component. This component allows you to
+                           <b>Search: </b>The top most component in the layout is the search component. This component allows you to
                             search for potential resources (Contacts) to fill your project roles. There are three filters: name,
                             role, and technology skill. The name filter is a text field which allows you to search the name
-                            fields of both the Account name and Contact name thanks to SOSL. The role and technology skill are
-                            both dropdownlists with defined picklist values. With filters entered, you would click search and an
-                            event is fired to start communicating with the below Potential Resources component. 
+                            fields on both the Account and Contact object through a SOSL query. The role and technology skill are
+                            both drop down lists with defined picklist values which are queried for using Apex. When a user provides filters,
+                            they can then click the 'Search' button and an event is fired to start communicating with the below 
+                            Potential Resources component. 
                         </li>
+                        <br/>
                         <li>
-                            <b>Potential Resources: </b>This component is loacted directly below the previous Search component, but is 
-                            only rendered upon searching. The Search component does an Apex callout to query for
-                            for matching data, and then the Potential Resources component renders that data into a formatted datatable.
-                            With this list of contacts, you can select any potential matches using the far right 'View' button which then
-                            fires an event to start communicating with the Add/Edit Resource component. 
+                            <b>Potential Resources: </b>This component is located directly below the previous Search component, but is 
+                            only rendered upon searching. The Search component does an Apex call-out to query for
+                            for matching data based on the given filters, and then the Potential Resources component renders that data into a 
+                            formatted datatable. With this datatable rendered, you can begin to add a contact to your project by selecting the
+                            far right 'View' button which will fire an event to start communicating with the Add/Edit Resource component. 
                         </li>
+                        <br/>
                         <li>
-                            <b>Add/Edit Resource: </b>This component is loacted directly below the previous Potential Resources
-                            component, but is only rendered upon selecting an individual resource. The Potential Resources component
-                            sends the Contact Id to the Add/Edit Resource component, and then the Add/Edit Resource does an Apex callout
-                            to gather more of the Contact's record details. The primary details being loaded are the Contact's current
-                            allocatoins. An allocation being a percentage of the Contact's time needed for a particualr project. So, 
-                            this component will show you all of the allocatoins the contact is currently allocated to in between the
+                            <b>Add/Edit Resource: </b>This component is located directly below the previous Potential Resources
+                            component, and is also only rendered upon selecting an individual resource. The Potential Resources component
+                            sends the Contact Id to the Add/Edit Resource component, and then the Add/Edit Resource does an Apex call-out
+                            to gather more of the Contact's record details. The primary details being queried for are the Contact's current
+                            allocations. An allocation being a percentage of the Contact's time needed for a particular project. So, 
+                            this component will show you all of the allocations the contact is currently allocated to in between your
                             project's start and end date. If you are comfortable adding the resource to your project without
                             overextending them, you can assign them an allocation yourself and click the 'Add Resource' button.
                         </li>
+                        <br/>
                         <li>
-                            <b>Current Resources: </b>This component is loacted directly below all the previous components. However,
+                            <b>Current Resources: </b>This component is located directly below all the previous components. However,
                             this component will render on page load. It is also important to note that when a project moves into 
-                            the 'In Progress' stage, a process builder kicks off which creates manadatory project roles. Thus, this
-                            component is a list of all currently allocated resources and manadatory resources that are yet to be filled.
+                            the 'In Progress' stage, a process builder kicks off which creates mandatory project roles. Thus, this
+                            component is a list of all currently allocated resources, and mandatory resources that are yet to be filled.
                             So, when you are adding a resources as described in the previous Add/Edit Resources section, if the contact
-                            is filling a manadatory role that is empty, it will do an update operation instead of an insert. However, you
-                            can also have multiple resources of the same role type. Few projects will have just one developer. So, when
-                            adding a second, third, fourth, etc. developer to a project, it will then do an insert operation. You can also
-                            edit any resources current allocation to a project by clicking on the 'Edit' button on the resource's 
+                            is filling a mandatory role that is empty, it will do an update operation instead of an insert. However, you
+                            can also have multiple resources of the same role type. For instance, few projects will have just one developer. So, when
+                            adding a second, third, fourth, etc. developer to a project, it will do an insert operation given that the pre-existing developer role
+                            is already filled. You can also rdit any resources current allocation for a project by clicking on the 'Edit' button on the resource's 
                             corresponding row on the datatable. Upon doing so, an event is fired which is received by the Add/Edit Resource
-                            component (hence the name). There you can edit a resource's allocatoin, change their project role, or even add
+                            component (hence the name). There you can edit a resource's allocation, change their project role, or even add
                             them to a second project role. 
                         </li>
                     </ul>
@@ -406,13 +412,20 @@
                 <h3>BS, Information Technology, Applications and Web Development Concentration </h3>
                 <h3><b>Honors:</b> 3.8 GPA - Magna Cum Laude</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat rhoncus placerat. 
-                    Curabitur eget magna eget dolor efficitur sollicitudin ut sed augue. Aliquam mollis porta 
-                    ipsum, ac mollis lorem cursus sagittis. Pellentesque accumsan erat nulla, in accumsan est 
-                    aliquet id. Vestibulum eget consequat lorem. Donec magna justo, convallis nec blandit ac, 
-                    efficitur sed est. Etiam vel enim magna. Duis non convallis erat. Sed erat orci, dapibus 
-                    vel dapibus vel, aliquam eu justo. In hac habitasse platea dictumst. Pellentesque malesuada
-                        convallis eros.
+                    I intially started my undergraduate education at Franklin College in Fall of 2012 as a Computer Science major. 
+                    Franklin College is located in Indiana, and Franklin itself is the small town just South of Indianapolis I grew up in.
+                    However, after two years I transferred to the University of South Florida Sarasota-Manatee in Fall of 2015 in order 
+                    to be closer to my parents that had moved to the area themselves a year prior. Unfortuantely, they did not have a Computer 
+                    Science major. However, the program still offered me the education and tools needed to pursue a career path in the general IT field. 
+                </p>
+                <p>
+                    The only downside is I wanted to pursue a career path in devlopment or engineering. Having graduated in Spring of 2018, 
+                    I spent the majority of that summer looking for a job, and when I wasn't doing that I was learning, coding, and filling 
+                    in the missing gaps so I could land a job as a developer. Luckily when it rains it pours, and during a one week span in 
+                    late August I was offered three jobs. One as a PHP developer, the second as an intern to full-time C#/.NET developer,
+                    and the final one being the Application Support Analyst with J&amp;J which is the role I presently hold. While this current position
+                    is not in development, I could not pass up on the chance to work with such a great company and potentially work my way 
+                    towards a developer role. 
                 </p>
             </div> 
         </div>   
