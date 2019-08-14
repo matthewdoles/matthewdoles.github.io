@@ -248,7 +248,60 @@
                     your need, you can add it directly to your project (Opportunity object).
                 </p>
                 <p>
-                    The second project I have worked on was a Visualforce to Lightning conversion 
+                    The second project I have worked on was a Visualforce to Lightning conversion/exercise. The Salesforce BUILD Team for
+                    J&ampJ have built an internal management tool (Salesforce instance) which helps them track demand, projects,
+                    resources, etc. Projects (Opportunity object) have related resources (Opportunity Resources custom object) which
+                    need to be filled by various emplyees (Contact object). When the applicatoin was built, a Visualforce page was
+                    developed to manage this interatoin of assigning contacts to a project role (Opportunity Resource) for a project
+                    (Opportunity). 
+                </p>
+                <p>
+                    This Visualforce page was called Opportunity Resource Management, and while the Visaulforce page got the job done -
+                    it was in need of a makeover. Thus, my role was to modernize and convert this Visualforce page 
+                    into an Aura Component(s). The functionality largely remains the same, but the presentation and intuitveness 
+                    was made a bit more user friendly. The new Opportunity Resource Management piece can be broken down into 4 
+                    seperate components that interact with one another:
+                    <ul>
+                        <li>
+                           <b>Search: </b>The top most component is the search component. This component allows you to
+                            search for potential resources (Contacts) to fill your project roles. There are three filters: name,
+                            role, and technology skill. The name filter is a text field which allows you to search the name
+                            fields of both the Account name and Contact name thanks to SOSL. The role and technology skill are
+                            both dropdownlists with defined picklist values. With filters entered, you would click search and an
+                            event is fired to start communicating with the below Potential Resources component. 
+                        </li>
+                        <li>
+                            <b>Potential Resources: </b>This component is loacted directly below the previous Search component, but is 
+                            only rendered upon searching. The Search component does an Apex callout to query for
+                            for matching data, and then the Potential Resources component renders that data into a formatted datatable.
+                            With this list of contacts, you can select any potential matches using the far right 'View' button which then
+                            fires an event to start communicating with the Add/Edit Resource component. 
+                        </li>
+                        <li>
+                            <b>Add/Edit Resource: </b>This component is loacted directly below the previous Potential Resources
+                            component, but is only rendered upon selecting an individual resource. The Potential Resources component
+                            sends the Contact Id to the Add/Edit Resource component, and then the Add/Edit Resource does an Apex callout
+                            to gather more of the Contact's record details. The primary details being loaded are the Contact's current
+                            allocatoins. An allocation being a percentage of the Contact's time needed for a particualr project. So, 
+                            this component will show you all of the allocatoins the contact is currently allocated to in between the
+                            project's start and end date. If you are comfortable adding the resource to your project without
+                            overextending them, you can assign them an allocation yourself and click the 'Add Resource' button.
+                        </li>
+                        <li>
+                            <b>Current Resources: </b>This component is loacted directly below all the previous components. However,
+                            this component will render on page load. It is also important to note that when a project moves into 
+                            the 'In Progress' stage, a process builder kicks off which creates manadatory project roles. Thus, this
+                            component is a list of all currently allocated resources and manadatory resources that are yet to be filled.
+                            So, when you are adding a resources as described in the previous Add/Edit Resources section, if the contact
+                            is filling a manadatory role that is empty, it will do an update operation instead of an insert. However, you
+                            can also have multiple resources of the same role type. Few projects will have just one developer. So, when
+                            adding a second, third, fourth, etc. developer to a project, it will then do an insert operation. You can also
+                            edit any resources current allocation to a project by clicking on the 'Edit' button on the resource's 
+                            corresponding row on the datatable. Upon doing so, an event is fired which is received by the Add/Edit Resource
+                            component (hence the name). There you can edit a resource's allocatoin, change their project role, or even add
+                            them to a second project role. 
+                        </li>
+                    </ul>
                 </p>
             </div>   
         </div>
