@@ -329,13 +329,44 @@
                 <h1>Whose Tagline is it Anyway</h1>
                 <h3>Alexa Custom Skill</h3> 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat rhoncus placerat. 
-                    Curabitur eget magna eget dolor efficitur sollicitudin ut sed augue. Aliquam mollis porta 
-                    ipsum, ac mollis lorem cursus sagittis. Pellentesque accumsan erat nulla, in accumsan est 
-                    aliquet id. Vestibulum eget consequat lorem. Donec magna justo, convallis nec blandit ac, 
-                    efficitur sed est. Etiam vel enim magna. Duis non convallis erat. Sed erat orci, dapibus 
-                    vel dapibus vel, aliquam eu justo. In hac habitasse platea dictumst. Pellentesque malesuada
-                    convallis eros.
+                    One week I was doing some Trailhead, and a certain Trail caught my eye: Innovate with Alexa and Amazon Web
+                    Services. The idea of building custom Alexa skills intrigued me. I completed a few of the Trailhead modules,
+                    but I had a taste for more. So I went to Udemy and bought an Alexa development course by Vivek Kapoor called
+                    Practical Hands-on Guide for Amazon Alexa Skill Development. This course provided me the fundamentals I needed
+                    to start bulindg custom Alexa Skills from scratch.
+                </p>
+                <p>
+                    After completing the course, the first Alexa skill I built was Alfred which is my own personal voice
+                    voice assistant. One of the hihglights of Alfred I developed was the ability for it to read my latest 
+                    tweet out loud by leveraging Twitter for Node.js to retrieve and read my latest tweet. Furthermore, 
+                    I've added logic to customize Alfred's response based upon the number of times the tweet was favorited.
+                    This particular experiment consuming the Twitter API is then what inspired me to create Whose Tagline Is It Anyway.
+                </p>
+                <p>
+                    Whose Tagline Is It Anyway is a movie trivia Alexa skill with two games. In the primary self-titled game
+                    (Whose Tagline Is It Anyway), you must guess which movie a random movie tagline belongs to from a pool of
+                    over 1,500+ popular movies. The second game is called Good Word Hunting. At the start of the game you are given up
+                    to 7 keywords that describe a movie from the same pool of 1,500+ popular movies. With those keywords, you must
+                    reply with how many names from lowest to highest billed you would need to guess what the moive may be. After
+                    being given the requested number of names, you then sumbit your guess.
+                </p>
+                <p>
+                    To develop Whose Tagline Is It Anyway I used the standard Alexa Skills Kit to design the voice interaction, and
+                    developed a Lambda function to handle the intent invocatoins as defined in my voice interaction. The runtime language
+                    of my Lambda function is Node.js. As for retrieving movie information, I am doing HTTP requests to The Movie 
+                    Database (TMDb) which offers a free public API. TMBb has almost half a million of movies cataloged. Luckily,
+                    in the GET request I can define parameters, like the number of times the movie was rated, to limit 
+                    the pool of queried movies. However, if you wanted to get the movie tagline or moive cast for a specific movie,
+                    voice intents are availalbe for the user to do so.
+                 </p>
+                <p>
+                    Additionally, the Good Word Hunting game is an entitlement. Meaning that you pay a one time fee ($1) to own the right
+                    to play the game. Configuring this option was eaily the hardest part of the project. When you start asking
+                    the user to pay money, the Amazon Alexa skill team will thoroughly test that your skill works as intended and 
+                    everything is working as intended. Wile it took a few times to make my skill compliant, I found satisifaction
+                    in the revision process and working towards a nice polished product. While the monetary transactoin is handled by 
+                    Amazon themselves, much code conifiguration was needed to ensure that the user wasn't able to access Good Word Hunting,
+                    and then the opposite after the user purchases the game.
                 </p>
             </div> 
         </div>   
