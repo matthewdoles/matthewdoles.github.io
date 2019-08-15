@@ -82,7 +82,7 @@ audio {
 }
 
 .home-img {
-  background-color: crimson;
+  background-image: url('img/home-img.png');
   height: 100%;
 }
 
