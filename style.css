@@ -9,7 +9,10 @@ body {
   font-size: 18px;
   line-height: 1.8em;
 }
-
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
 .nav-scrolled {
   position: fixed;
 }
