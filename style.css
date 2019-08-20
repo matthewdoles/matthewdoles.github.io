@@ -9,10 +9,12 @@ body {
   font-size: 18px;
   line-height: 1.8em;
 }
+
 a {
   text-decoration: none;
   font-weight: bold;
 }
+
 .nav-scrolled {
   position: fixed;
 }
@@ -37,10 +39,6 @@ nav {
   width: 100%;
 }
 
-.scroll-shadow {
-  box-shadow: 0 0 10px #333;
-}
-
 nav ul {
   width: 90%;
   justify-content: space-around;
@@ -55,19 +53,6 @@ nav ul a {
 
 nav ul a:hover {
   color: #fff;
-}
-
-#rain {
-  top: 80px;
-}
-
-
-.scrollButton:hover {
-  opacity: .5;
-}
-
-audio { 
-  display:none;
 }
 
 .home-img,
@@ -126,33 +111,6 @@ audio {
   background: #FFFFFF
 }
 
-
-.ptext {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 30px;
-  letter-spacing: 8px;
-  font-family: 'Handlee', cursive;
-}
-
-.ptext .border {
-  background-color: rgba(17, 17, 17, 0.664);
-  color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-@media(max-width:568px) {
-  .pimg1,
-  .pimg2,
-  .pimg3 {
-    background-attachment: scroll;
-  }
-}
-
 header {
   height: 100%;
   position: relative;
@@ -161,6 +119,7 @@ header {
   background: rgba(229, 229, 229, 0.2);
   z-index: 35;
 }
+
 header .content {
   position: relative;
   display: block;
@@ -184,38 +143,46 @@ header .content {
   height: auto;
   overflow: auto;
 }
+
 .section-image {
   width: 25%;
   height: auto;
   float:left
 }
+
 .section-image img {
   max-width:40%;
   max-height:40%;
   float: right;
 }
+
 .section-info {
   width: 55%;
   height: auto;
   float: left;
   padding-left: 50px;
 }
+
 .section-info h1 {
   margin-block-start: 0px;
 }
+
 #certifications {
   width: 100%;
   text-align: center;
   margin: 0 auto;
 }
+
 .certifications-images {
   width: 100%;
   float:left
 }
+
 .certifications-images img {
   max-width: 20%;
   padding: 0px 20px;
 }
+
 .title h1 {
   padding: 20px; 
   text-align:center;
@@ -230,6 +197,7 @@ header .content {
   margin-bottom: 5px;
   margin-right: 5px;
 }
+
 .title h1:after {
   content: "";
   display:  inline-block;
@@ -239,6 +207,7 @@ header .content {
   margin-bottom: 5px;
   margin-left: 5px;
 }
+
 .social-detail {
   padding: 30px;
   height: auto;
@@ -247,20 +216,24 @@ header .content {
   margin: auto;
   padding-left: 20%;
 }
+
 .contact, .resources {
   width: 50%;
   height: auto;
   float: left;
 }
+
 .social-item {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .social-item img {
   vertical-align:middle;
   width: 40px;
   height: 40px;
 }
+
 .social-item span {
   padding-left: 10px;
 }
@@ -271,6 +244,7 @@ header .content {
     height: auto;
     overflow: auto;
   }
+
   .section-image {
     width: 100%;
     height: auto;
@@ -278,37 +252,52 @@ header .content {
     text-align: center;
     margin: 0 auto;
   }
+
   .section-image, .section-detail h1, .section-detail h3 {
     text-align: center;
     margin: 0 auto;
   }
+
   .section-image img {
     max-width:30%;
     max-height:30%;
     float: none;
   }
+
   .section-info {
     width: 100%;
     height: auto;
     float: none;
     padding-left: 0px;
   }
+  .section-info h1, .section-info h3 {
+    padding: 20px 0px;
+  }
+  
   .social-detail {
     width: 100%;
     margin: auto;
     padding-left: 0%;
   }
+
   .contact, .resources {
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
   }
+
   .social-item {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .social-item img {
+    vertical-align:middle;
+    width: 60px;
+    height: 60px;
   }
   .social-item span {
     padding-left: 0px;
     display: none
   }
+
 }
