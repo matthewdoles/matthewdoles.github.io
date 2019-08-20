@@ -213,7 +213,7 @@ header .content {
   float:left
 }
 .certifications-images img {
-  max-width: 15%;
+  max-width: 20%;
   padding: 0px 20px;
 }
 .title h1 {
@@ -263,4 +263,52 @@ header .content {
 }
 .social-item span {
   padding-left: 10px;
+}
+
+@media all and (max-width: 1100px) {
+  .section-detail {
+    padding: 30px;
+    height: auto;
+    overflow: auto;
+  }
+  .section-image {
+    width: 100%;
+    height: auto;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .section-image, .section-detail h1, .section-detail h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .section-image img {
+    max-width:30%;
+    max-height:30%;
+    float: none;
+  }
+  .section-info {
+    width: 100%;
+    height: auto;
+    float: none;
+    padding-left: 0px;
+  }
+  .social-detail {
+    width: 100%;
+    margin: auto;
+    padding-left: 0%;
+  }
+  .contact, .resources {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .social-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .social-item span {
+    padding-left: 0px;
+    display: none
+  }
 }
